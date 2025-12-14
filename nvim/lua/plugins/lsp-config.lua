@@ -30,15 +30,8 @@ return {
 			})
 
 			vim.lsp.config("ts_ls", {
-				settings = {
-					Lua = {
-						diagnostics = {
-							globals = { "vim" },
-						},
-					},
-				},
+				settings = {},
 			})
-
 			vim.diagnostic.config({
 				virtual_text = {
 					prefix = "●", -- could also be '■', '▎', etc
