@@ -39,6 +39,17 @@ return {
 				},
 			})
 
+			vim.diagnostic.config({
+				virtual_text = {
+					prefix = "●", -- could also be '■', '▎', etc
+					spacing = 2,
+				},
+				signs = true, -- show signs in the gutter
+				underline = true, -- underline problematic code
+				update_in_insert = false, -- don't update while typing
+				severity_sort = true, -- sort by severity
+			})
+
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
